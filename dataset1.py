@@ -1,5 +1,7 @@
 import doctest
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 def true_function(x):
@@ -19,8 +21,7 @@ x = np.array([-1,1])
 plt.plot(x,true_function(x), label = "y = sin(pi * x * 0.8)")
 plt.legend()
 plt.show()
-fig = plt.figure()
-fig.savefig("ex1.1.png")
+plt.savefig("ex1.1.png")
 
 if __name__ == '__main__':
     doctest.testmod()
